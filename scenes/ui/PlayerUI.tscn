@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqidp7lmwt0by"]
+
+[ext_resource type="Script" path="res://scripts/ui/PlayerUI.gd" id="1_tx8f4"]
+[ext_resource type="PackedScene" uid="uid://dp8pvl25rhpby" path="res://scenes/ui/StatsMeter.tscn" id="2_gkr0j"]
+[ext_resource type="Texture2D" path="res://assets/ui/meters/dampness_indicator.svg" id="3_roiq5"]
+[ext_resource type="Texture2D" path="res://assets/ui/meters/caffeine_indicator.svg" id="4_3mqs6"]
+
+[node name="PlayerUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tx8f4")
+
+[node name="StatsContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -220.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 140.0
+grow_horizontal = 0
+theme_override_constants/separation = 10
+
+[node name="DampnessMeter" parent="StatsContainer" instance=ExtResource("2_gkr0j")]
+layout_mode = 2
+value = 0.0
+meter_title = "Dampness"
+icon_texture = ExtResource("3_roiq5")
+
+[node name="CaffeineMeter" parent="StatsContainer" instance=ExtResource("2_gkr0j")]
+layout_mode = 2
+meter_title = "Caffeine"
+invert_colors = true
+icon_texture = ExtResource("4_3mqs6")
+
+[node name="StatusMessage" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -60.0
+offset_right = 250.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.905882, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 18
+text = "Status Message"
+horizontal_alignment = 1
+
+[node name="MessageTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="MessageTimer" to="." method="_on_message_timer_timeout"]
