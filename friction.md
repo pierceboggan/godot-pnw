@@ -1,0 +1,4 @@
+-Checkpoints - tell agent it used to work and it should roll back to previous checkpoint
+-source control tool should be invokable at end of conversation turn
+-Tools for debugging, agent mode should bea ble to iterate on this
+-cant hit enter / send command bc placeholder stays in text input area for prompt (took screenshot)

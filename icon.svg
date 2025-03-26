@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Pacific Northwest themed icon with rain and coffee -->
+  <!-- Background -->
+  <rect x="0" y="0" width="128" height="128" rx="16" ry="16" fill="#2F4F4F" />
+  
+  <!-- Mountain -->
+  <polygon points="16,96 64,32 112,96" fill="#3B5D50" />
+  <polygon points="32,96 64,48 96,96" fill="#2B4B42" />
+  
+  <!-- Rain drops -->
+  <circle cx="32" cy="24" r="4" fill="#ADD8E6" />
+  <circle cx="48" cy="18" r="4" fill="#ADD8E6" />
+  <circle cx="64" cy="22" r="4" fill="#ADD8E6" />
+  <circle cx="80" cy="16" r="4" fill="#ADD8E6" />
+  <circle cx="96" cy="26" r="4" fill="#ADD8E6" />
+  
+  <!-- Coffee cup -->
+  <rect x="52" y="72" width="24" height="20" rx="2" ry="2" fill="#8B4513" />
+  <rect x="50" y="70" width="28" height="4" rx="1" ry="1" fill="#D2B48C" />
+  <path d="M76,76 C84,78 84,86 76,88" fill="none" stroke="#D2B48C" stroke-width="2" />
+  
+  <!-- Steam -->
+  <path d="M58,66 C60,62 62,64 60,60" fill="none" stroke="#FFFFFF" stroke-width="1" />
+  <path d="M64,68 C66,64 68,66 66,62" fill="none" stroke="#FFFFFF" stroke-width="1" />
+  <path d="M70,66 C72,62 74,64 72,60" fill="none" stroke="#FFFFFF" stroke-width="1" />
+</svg>

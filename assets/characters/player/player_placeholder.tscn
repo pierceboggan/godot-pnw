@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cbi1l5sw3kwbo"]
+
+[node name="PlayerPlaceholder" type="Node3D"]
+
+[node name="Body" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0)
+height = 1.3
+sides = 16
+
+[node name="Head" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+radius = 0.3
+
+[node name="RightArm" type="CSGCylinder3D" parent="."]
+transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, 0.35, 1.01, 0)
+height = 0.7
+radius = 0.1
+
+[node name="LeftArm" type="CSGCylinder3D" parent="."]
+transform = Transform3D(-0.707107, 0.707107, 0, -0.707107, -0.707107, 0, 0, 0, 1, -0.35, 1.01, 0)
+height = 0.7
+radius = 0.1
+
+[node name="RightLeg" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, -0.35, 0)
+height = 0.9
+radius = 0.12
+
+[node name="LeftLeg" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, -0.35, 0)
+height = 0.9
+radius = 0.12

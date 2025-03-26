@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://dj13cdy1dchs8"]
+
+[ext_resource type="Script" path="res://scripts/player/Player.gd" id="1_t4di8"]
+[ext_resource type="Script" path="res://scripts/player/PlayerCamera.gd" id="2_jlm5e"]
+[ext_resource type="Script" path="res://scripts/player/PlayerStats.gd" id="3_ua4lj"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8mwd4"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_rucp2"]
+radius = 0.4
+height = 1.8
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+script = ExtResource("1_t4di8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_8mwd4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_rucp2")
+
+[node name="CameraController" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+script = ExtResource("2_jlm5e")
+
+[node name="FirstPersonCamera" type="Camera3D" parent="CameraController"]
+current = true
+
+[node name="ThirdPersonCamera" type="Camera3D" parent="CameraController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PlayerStats" type="Node" parent="."]
+script = ExtResource("3_ua4lj")
